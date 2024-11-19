@@ -1,0 +1,13 @@
+.w-alert {
+    background: color-mix(in srgb, oklch(51.01% .274 263.83) 5%, transparent);
+    padding: 1.5rem;
+    font-weight: 400;
+    transition: color .3s ease;
+    margin-block: 1rem;
+    position: relative;
+    border-width: 0;
+    border-inline-start-width: 3px;
+    border-style: solid;
+    border-color: #1278c2;
+  }
+  

@@ -1,0 +1,74 @@
+<p>Template reference variable from FormsModule #loginForm="ngForm"</p>
+<hr>
+<div class="container">
+    <form #loginForm="ngForm">
+        <h1>loginForm</h1>
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" ngModel name="email">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" ngModel name="pwd">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="login(loginForm)">Login</button>
+    </form>
+    <hr>
+    <form #loginForm2="ngForm">
+        <h1>loginForm2</h1>
+        <p>reference one field #email2="ngModel"</p>
+        <div class="py-2">
+            from value= {{loginForm2.value | json}}
+            <br>email value= {{email2.value}}
+        </div>
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" ngModel name="email2" #email2="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" ngModel name="pwd2">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="login2(loginForm2)">Login</button>
+    </form>
+    <hr>
+    <form #loginForm3="ngForm">
+        <h1>loginForm3</h1>
+        <p>ngModel 2 way data binding in variables in ts</p>
+        <div class="py-2">
+            from value= {{loginForm3.value | json}}
+            <br>email variable value= {{email3}}
+        </div>
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" [(ngModel)]="email3" name="email3">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" [(ngModel)]="pwd3" name="pwd3">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <hr>
+    <form #loginForm4="ngForm">
+        <h1>loginForm4</h1>
+        <p>ngModel 2 way data binding in object in ts</p>
+        <div class="py-2">
+            from value= {{loginForm4.value | json}}
+            <br> object value={{loginDto | json}}
+        </div>
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" [(ngModel)]="loginDto.email4" name="email4">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" [(ngModel)]="loginDto.pwd4" name="pwd4">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+
+</div>

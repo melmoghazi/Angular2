@@ -1,0 +1,143 @@
+<div class="container-fluid my-4">
+    <div class="row mx-0 w-alert">
+      <div class="col-8 d-flex align-items-center">
+        <h3 class="mb-0">Best Practices For Structuring Angular Apps for Scalability and Maintainability</h3>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <ul>
+          <li>Core Folder:
+            <ul>
+              <li>Purpose: Singleton services, universal components, interceptors, guards, and models</li>
+              <li>Design Patterns: Singleton for services to ensure only one instance exists</li>
+            </ul>
+          </li>
+          <li>
+            Shared Folder:
+            <ul>
+              <li>Purpose: Houses components, directives, pipes, and models that are reused in multiple features but don't belong to a single feature module</li>
+              <li>Design Patterns: Shared Module pattern to avoid redundancy and facilitate reusability</li>
+            </ul>
+          </li>
+          <li>
+            Features Folder:
+            <ul>
+              <li>Purpose: Each feature module encapsulates a distinct feature or business domain of the application (e.g., Auth, Home)</li>
+              <li>Design Patterns: Lazy loading for feature modules to improve initial load time.</li>
+            </ul>
+          </li>
+          <li>
+            Enums Folder:
+            <ul>
+              <li>Purpose: Define enums and constants used throughout the application for better maintainability and readability</li>
+            </ul>
+          </li>
+          <li>
+            Interfaces Folder:
+            <ul>
+              <li>Purpose: Define interfaces for models and services to ensure consistency and type safety</li>
+            </ul>
+          </li>
+          <li>
+            Styles Folder:
+            <ul>
+              <li>Purpose: Define global styles, variables, and mixins to maintain a consistent look and feel across the application</li>
+            </ul>
+          </li>
+          <li>
+            Assets Folder:
+            <ul>
+              <li>Purpose: Store static assets like images, fonts, and other resources used in the application</li>
+            </ul>
+          </li>
+          <li>
+            Environments Folder:
+            <ul>
+              <li>Purpose: Store environment-specific configuration files for different environments (e.g., development, production)</li>
+            </ul>
+          </li>
+          <li>
+            Models:
+            <ul>
+              <li>Purpose: Define interfaces or classes for the data used within the application</li>
+              <li>Core Models: Universal models used across the app.</li>
+              <li>Shared Models: Models used in multiple features but not universally.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <pre>
+          src/
+          │
+          ├── app/
+          │   ├── core/
+          │   │   ├── interceptors/
+          │   │   │   └── auth.interceptor.ts
+          │   │   ├── services/
+          │   │   │   └── auth.service.ts
+          │   │   ├── guards/
+          │   │   │   └── auth.guard.ts
+          │   │   ├── models/
+          │   │   │   └── user.model.ts
+          │   │   └── core.module.ts
+          │   ├── shared/
+          │   │   ├── components/
+          │   │   │   ├── header/
+          │   │   │   └── footer/
+          │   │   ├── directives/
+          │   │   ├── pipes/
+          │   │   ├── models/
+          │   │   │   ├── user.model.ts
+          │   │   │   └── response.model.ts
+          │   │   └── shared.module.ts
+          │   ├── features/
+          │   │   ├── auth/
+          │   │   │   ├── components/
+          │   │   │   │   ├── login/
+          │   │   │   │   └── register/
+          │   │   │   ├── services/
+          │   │   │   │   └── auth.service.ts
+          │   │   │   ├── models/
+          │   │   │   │   └── auth-credentials.model.ts
+          │   │   │   └── auth.module.ts
+          │   │   ├── home/
+          │   │   │   ├── components/
+          │   │   │   │   ├── dashboard/
+          │   │   │   │   └── profile/
+          │   │   │   ├── services/
+          │   │   │   │   └── home.service.ts
+          │   │   │   ├── models/
+          │   │   │   │   └── dashboard-data.model.ts
+          │   │   │   └── home.module.ts
+          │   ├── enums/
+          │   │   ├── user-role.enum.ts
+          │   │   └── status-code.enum.ts
+          │   ├── interfaces/
+          │   │   ├── user.interface.ts
+          │   │   └── response.interface.ts
+          │   ├── app.component.html
+          │   ├── app-routing.module.ts
+          │   └── app.component.ts
+          │   └── app.module.ts
+          │
+          ├── assets/
+          ├── environments/
+          └── styles/
+              ├── _variables.scss
+              ├── _mixins.scss
+              └── styles.scss
+          </pre>
+      </div>
+    </div>
+  </div>
+  
