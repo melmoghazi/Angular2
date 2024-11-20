@@ -70,5 +70,46 @@
         </div>
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
-
+    <hr>
+    <form #loginForm5="ngForm">
+        <h1>loginForm5</h1>
+        <p>Angular Template-driven Form - Show and hide validation error messages</p>
+        <div class="py-2">
+            object value={{loginDto5 | json}}
+            <br> errors= {{email5.errors | json}}
+        </div>
+        <!-- @if(email5.invalid && email5.dirty){ -->
+        @if(email5.errors?.['required'] && email5.touched){
+        <div class="alert alert-danger">
+            <p>email is required</p>
+        </div>
+        }
+        @if(email5.errors?.['minlength'] && email5.touched && !email5.errors?.['required']){
+        <div class="alert alert-danger">
+            <p>Email must be more than {{email5.errors?.['minlength'].requiredLength}} characters
+                but you inserted only {{email5.errors?.['minlength'].actualLength}} characters.
+            </p>
+        </div>
+        }
+        @if(email5.errors?.['email'] && !email5.errors?.['minlength'] && email5.touched && !email5.errors?.['required']){
+        <div class="alert alert-danger">
+            <p>email is not vlaid</p>
+        </div>
+        }
+        @if(email5.errors?.['pattern'] ){
+        <div class="alert alert-danger">
+            <p>email must have .com</p>
+        </div>
+        }
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" [(ngModel)]="loginDto5.email5" name="email5" #email5="ngModel"
+                required minlength="5" maxlength="15" email pattern=".*@.*\.com$">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" [(ngModel)]="loginDto5.pwd5" name="pwd5" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
 </div>

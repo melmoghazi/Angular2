@@ -26,4 +26,8 @@ export class LoginComponent {
     email4: string, pwd4: string
   } = { email4: '', pwd4: '' };
 
+  //object on ther fly
+loginDto5: {
+  email5: string, pwd5: string
+} = { email5: '', pwd5: '' };
 }
