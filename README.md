@@ -12,5 +12,8 @@ Properties of the control:
 6-ng-invalid
 
 ## Angular Template-driven Form - Show and hide validation error messages
-Angular Template-driven Form - All Built-in Validators
-Understanding Angular Form onSubmit and ngSubmit
+Angular Template-driven Form - All Built-in Validators.
+Understanding Angular Form onSubmit and ngSubmit.
+Understanding Angular ngModelOptions and ngModelChange.
+Angular Forms - Advanced ngModelOptions
+Angular Forms - Understanding ngModel One Way and Bidirectional Data Binding

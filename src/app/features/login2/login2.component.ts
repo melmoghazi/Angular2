@@ -1,5 +1,5 @@
 import { NgForm } from '@angular/forms';
-import { Component } from '@angular/core';
+import { Component, CSP_NONCE } from '@angular/core';
 
 import { SharedModule } from '../../shared/shared.module';
 
@@ -23,7 +23,12 @@ export class Login2Component {
   loginDto2: { email: string, pwd: string } = { email: '', pwd: '' };
   OutOfFormButtonLogin2(loginForm2: NgForm) {
     console.log('Is From Valid = ', loginForm2.valid, '-loginform value = ', loginForm2.value)
+  }
 
+  loginDto3: { email3: string, pwd3: string } = { email3: '', pwd3: '' };
+
+  onEmailChanged(email: string) {
+    console.log('Email=', email);
   }
 
 }
