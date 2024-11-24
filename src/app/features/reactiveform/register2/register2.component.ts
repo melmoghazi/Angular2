@@ -11,7 +11,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 })
 export class Register2Component {
 
-  form!: FormGroup;
+  form: FormGroup;
   userName = new FormControl<string>('test', { updateOn: 'blur', nonNullable: true });
 
   constructor() {

@@ -19,12 +19,17 @@ Angular Forms - Advanced ngModelOptions
 Angular Forms - Understanding ngModel One Way and Bidirectional Data Binding
 
 ## Angular Reactive Form
-Introduction to Angular Reactive Form
-Reactive Form - Understanding Form Control
+- Introduction to Angular Reactive Form
+- Reactive Form - Understanding Form Control
     1-Form Group 2-Form Array 3-Form Control 4-Form Record
-Form Control:
-1-Generic strong type FormControl<string>('')
-2-Initial value:
-    1-FormControl<string>({value:'',disabled:false})
-    2-FormControl<boolean>({value:true, disabled:false})
-    3-FormControl<string>('',{updateOn:'blur'}), 
+- Form Control:
+    1-Generic strong type FormControl<string>('')
+    2-Initial value:
+        1-FormControl<string>({value:'',disabled:false})
+        2-FormControl<boolean>({value:true, disabled:false})
+        3-FormControl<string>('',{updateOn:'blur'}), 
+- Reactive Form - How can use Form Builder
+
+
+tsconfig.json "noUnusedLocals": true // means anything not used must be removed.
+tsconfig.app.json in compilerOptions "strictPropertyInitialization": false //means property initialization not required.

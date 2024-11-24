@@ -6,6 +6,7 @@ import { LoginComponent } from './features/login/login.component';
 import { Login2Component } from './features/login2/login2.component';
 import { RegisterComponent } from './features/reactiveform/register/register.component';
 import { Register2Component } from './features/reactiveform/register2/register2.component';
+import { Register3Component } from './features/reactiveform/register3/register3.component';
 
 export const routes: Routes = [
     {
@@ -32,6 +33,10 @@ export const routes: Routes = [
     {
         path: 'register2',
         component: Register2Component
+    },
+    {
+        path: 'register3',
+        component: Register3Component
     },
     {
         path: '**',

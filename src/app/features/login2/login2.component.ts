@@ -1,5 +1,5 @@
 import { NgForm } from '@angular/forms';
-import { Component, CSP_NONCE } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { SharedModule } from '../../shared/shared.module';
 

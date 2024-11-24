@@ -1,6 +1,6 @@
 import { JsonPipe } from '@angular/common';
 import { Component } from '@angular/core';
-import { EmailValidator, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
