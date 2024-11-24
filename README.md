@@ -29,6 +29,9 @@ Angular Forms - Understanding ngModel One Way and Bidirectional Data Binding
         2-FormControl<boolean>({value:true, disabled:false})
         3-FormControl<string>('',{updateOn:'blur'}), 
 - Reactive Form - How can use Form Builder
+- Reactive Form Validations
+- Reactive Form - Custom Validators for Password Match
+- Reactive Form - Show Validation Error Message
 
 
 tsconfig.json "noUnusedLocals": true // means anything not used must be removed.

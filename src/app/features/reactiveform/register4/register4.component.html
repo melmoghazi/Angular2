@@ -1,0 +1,28 @@
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            User Name: <input type="text" class="form-control" formControlName="userName">
+            @if (form.get('userName')?.hasError('required')) {
+            <div>
+                <p>this field is required.</p>
+            </div>
+            }
+        </div>
+        <div class="form-group">
+            Email: <input type="text" class="form-control" formControlName="email">
+        </div>
+        <div class="form-group">
+            Password: <input type="text" class="form-control" formControlName="password">
+        </div>
+        <div class="form-group">
+            Confirm Password: <input type="text" class="form-control" formControlName="confirmPassword">
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+    <div>
+        {{form.value | json}}
+    </div>
+    <div class="alert alert-danger">
+        {{form.get('confirmPassword')?.errors | json}}
+    </div>
+</div>
